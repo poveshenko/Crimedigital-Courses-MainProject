@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/matches"
+        android:title="Матчи"
+        android:icon="@drawable/soccerball"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/details"
+        android:title="Инфо"
+        android:icon="@drawable/detail"
+        app:showAsAction="ifRoom" />
+</menu>

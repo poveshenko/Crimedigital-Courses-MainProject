@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#80DD84</color>
+    <color name="green2">#8080DD84</color>
+    <color name="red">#AA1621</color>
+    <color name="black_white">#C2BFBF</color>
+    <color name="yellow">#FF5722</color>
+    <color name="grey">#7E7978</color>
+    <color name="black_white2">#3C3C3C</color>
+    <color name="transparent">#00000000</color>
+
+
+
+    <color name="active_icon_color">#FF0000</color> <!-- Активный цвет иконки -->
+    <color name="inactive_icon_color">#000000</color> <!-- Неактивный цвет иконки -->
+    <color name="active_text_color">#FF0000</color> <!-- Активный цвет текста -->
+    <color name="inactive_text_color">#000000</color> <!-- Неактивный цвет текста -->
+</resources>
+
+
+

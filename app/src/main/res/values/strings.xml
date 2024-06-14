@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MatchResults</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    //Текст
+    <string name="textTitleMatchDetails">Детали</string>
+    <string name="textTitleInfo">Инфо</string>
+    <string name="buttonBack">Назад</string>
+    <string name="textTitleMatchList">Футбольные матчи</string>
+    <string name="hint">Введите название команды</string>
+    <string name="contentDescription">description_of_the_image</string>
+
+
+</resources>
