@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!-- Content for match details -->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -58,6 +58,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry"
+                    android:text="@string/Time"/>
+
+
                 <TextView
                     android:id="@+id/textTime"
                     android:layout_width="match_parent"
@@ -66,11 +81,26 @@
                     android:textSize="12sp"
                     tools:text="time" />
 
+            </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="@color/white" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry"
+                    android:text="@string/Location"/>
                 <TextView
                     android:id="@+id/textLocation"
                     android:layout_width="match_parent"
@@ -78,6 +108,8 @@
                     android:textColor="@color/green"
                     android:textSize="12sp"
                     tools:text="Location" />
+
+            </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"

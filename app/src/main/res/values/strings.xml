@@ -12,5 +12,10 @@
     <string name="hint">Введите название команды</string>
     <string name="contentDescription">description_of_the_image</string>
 
+    <string name="Match">Match:</string>
+    <string name="Round">Round:</string>
+    <string name="Time">Date Utc:</string>
+    <string name="Location">Location:</string>
+
 
 </resources>

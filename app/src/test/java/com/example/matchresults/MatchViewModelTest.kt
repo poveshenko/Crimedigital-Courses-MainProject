@@ -3,7 +3,7 @@ package com.example.matchresults
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.example.matchresults.data.MatchViewModel
-import com.example.matchresults.data.RetrofitInstance
+import com.example.matchresults.data.api.RetrofitInstance
 import com.example.matchresults.data.api.Api
 import com.example.matchresults.model.MatchItemsData
 import com.example.matchresults.model.MatchList

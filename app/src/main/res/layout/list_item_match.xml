@@ -28,32 +28,95 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
-
-            <TextView
-                android:id="@+id/textTime"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/green"
-                android:textSize="12sp"
-                tools:text="time" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    android:text="@string/Time"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/textTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    tools:text="time"
+                    tools:ignore="RtlSymmetry" />
+
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/white" />
 
-            <TextView
-                android:id="@+id/textLocation"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/green"
-                android:textSize="12sp"
-                tools:text="Location" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry"
+                    android:text="@string/Match"/>
+
+                <TextView
+                    android:id="@+id/NumberMatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="20dp"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry"
+                    tools:text="Number Match"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="8dp"
+                    android:paddingLeft="2dp"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry"
+                    android:text="@string/Round"/>
+
+                <TextView
+                    android:id="@+id/NumberRound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry"
+                    tools:text="Number Round"/>
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="1dp"
                 android:background="@color/white" />
 
             <LinearLayout

@@ -1,6 +1,5 @@
-package com.example.matchresults.data
+package com.example.matchresults.data.api
 
-import com.example.matchresults.data.api.Api
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
