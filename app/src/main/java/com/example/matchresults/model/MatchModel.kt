@@ -3,7 +3,7 @@ package com.example.matchresults.model
 import android.os.Parcel
 import android.os.Parcelable
 
-data class MatchItemsData(
+data class MatchModel(
     val AwayTeam: String,
     val AwayTeamScore: Int,
     val DateUtc: String,
@@ -42,12 +42,12 @@ data class MatchItemsData(
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<MatchItemsData> {
-        override fun createFromParcel(parcel: Parcel): MatchItemsData {
-            return MatchItemsData(parcel)
+    companion object CREATOR : Parcelable.Creator<MatchModel> {
+        override fun createFromParcel(parcel: Parcel): MatchModel {
+            return MatchModel(parcel)
         }
 
-        override fun newArray(size: Int): Array<MatchItemsData?> {
+        override fun newArray(size: Int): Array<MatchModel?> {
             return arrayOfNulls(size)
         }
     }

@@ -5,7 +5,7 @@ import androidx.lifecycle.Observer
 import com.example.matchresults.data.MatchViewModel
 import com.example.matchresults.data.api.RetrofitInstance
 import com.example.matchresults.data.api.Api
-import com.example.matchresults.model.MatchItemsData
+import com.example.matchresults.model.MatchModel
 import com.example.matchresults.model.MatchList
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
@@ -37,7 +37,7 @@ class MatchViewModelTest {
         // Создание объекта MatchList для возвращения из запроса
         val matchList = MatchList().apply {
             add(
-                MatchItemsData(
+                MatchModel(
                     AwayTeam = "Team A",
                     AwayTeamScore = 1,
                     DateUtc = "2023-06-12T18:00:00Z",
@@ -56,7 +56,7 @@ class MatchViewModelTest {
 
         // Создаем observer для LiveData
         @Suppress("UNCHECKED_CAST")
-        val observer = mock(Observer::class.java) as Observer<List<MatchItemsData>>
+        val observer = mock(Observer::class.java) as Observer<List<MatchModel>>
         viewModel.matches.observeForever(observer)
 
         // Вызываем метод fetchMatches (который использует корутины)

@@ -12,7 +12,7 @@ import com.example.matchresults.R
 import com.example.matchresults.adapter.MatchAdapter
 import com.example.matchresults.data.MatchViewModel
 import com.example.matchresults.databinding.FragmentMatchListBinding
-import com.example.matchresults.model.MatchItemsData
+import com.example.matchresults.model.MatchModel
 
 class MatchListFragment : Fragment() {
 
@@ -65,7 +65,7 @@ class MatchListFragment : Fragment() {
         })
     }
 
-    private fun openMatchDetails(matchItem: MatchItemsData) {
+    private fun openMatchDetails(matchItem: MatchModel) {
         val fragment = MatchDetailsFragment.newInstance(matchItem)
         parentFragmentManager.beginTransaction()
             .replace(R.id.container, fragment)

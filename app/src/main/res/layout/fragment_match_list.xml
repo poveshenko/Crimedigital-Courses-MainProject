@@ -24,17 +24,24 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-        <ImageButton
-            android:id="@+id/buttonSearch"
+        <FrameLayout
             android:layout_width="48dp"
-            android:layout_height="49dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/search"
-            android:contentDescription="@string/contentDescription"
+            android:layout_height="0dp"
+            android:background="@color/green"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextSearch"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/editTextSearch"
-            app:layout_constraintTop_toTopOf="@+id/editTextSearch" />
+            app:layout_constraintTop_toTopOf="@+id/editTextSearch">
+
+            <ImageButton
+                android:id="@+id/buttonSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/contentDescription"
+                android:scaleType="fitXY"
+                android:src="@drawable/search" />
+        </FrameLayout>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
@@ -55,14 +62,10 @@
                 android:textSize="24sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
-
-
-
-
-        <!-- RecyclerView to display match items -->
+        <!--Использовал LinearLayoutManager вместо Grid-->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
-            android:layout_width="412dp"
+            android:layout_width="match_parent"
             android:layout_height="564dp"
             android:layout_marginTop="20dp"
             android:background="@color/black"
