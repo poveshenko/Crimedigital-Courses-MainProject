@@ -10,7 +10,6 @@ object RetrofitInstance {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
-
     var api: Api? = null
         get() {
             if (field == null) {
