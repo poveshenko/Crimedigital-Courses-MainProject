@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.matchresults.R
 import com.example.matchresults.databinding.FragmentMatchDetailsBinding
-import com.example.matchresults.model.MatchItemsData
+import com.example.matchresults.model.MatchModel
 import com.example.matchresults.utils.TimeUtils
 
 
@@ -16,12 +16,12 @@ import com.example.matchresults.utils.TimeUtils
 class MatchDetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentMatchDetailsBinding
-   private  val matchFragment = MatchListFragment()
+    private val matchFragment = MatchListFragment()
 
     companion object {
         private const val ARG_MATCH_ITEM = "match_item"
 
-        fun newInstance(matchItem: MatchItemsData): MatchDetailsFragment {
+        fun newInstance(matchItem: MatchModel): MatchDetailsFragment {
             val fragment = MatchDetailsFragment()
             val args = Bundle()
             args.putParcelable(ARG_MATCH_ITEM, matchItem)
@@ -53,7 +53,7 @@ class MatchDetailsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val matchItem = arguments?.getParcelable<MatchItemsData>(ARG_MATCH_ITEM)
+        val matchItem = arguments?.getParcelable<MatchModel>(ARG_MATCH_ITEM)
         matchItem?.let {
             binding.textTeam1.text = it.HomeTeam
             binding.textTeam2.text = it.AwayTeam

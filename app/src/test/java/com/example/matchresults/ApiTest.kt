@@ -1,7 +1,7 @@
 package com.example.matchresults
 
 import com.example.matchresults.data.api.Api
-import com.example.matchresults.model.MatchItemsData
+import com.example.matchresults.model.MatchModel
 import com.example.matchresults.model.MatchList
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
@@ -20,7 +20,7 @@ class ApiTest {
         // Создание объекта MatchList для возвращения из запроса
         val matchList = MatchList().apply {
             add(
-                MatchItemsData(
+                MatchModel(
                     AwayTeam = "Team A",
                     AwayTeamScore = 1,
                     DateUtc = "2023-06-12T18:00:00Z",

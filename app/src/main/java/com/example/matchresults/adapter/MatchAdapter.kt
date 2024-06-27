@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.matchresults.databinding.ListItemMatchBinding
-import com.example.matchresults.model.MatchItemsData
+import com.example.matchresults.model.MatchModel
 import com.example.matchresults.utils.TimeUtils
 
 
@@ -12,8 +12,8 @@ import com.example.matchresults.utils.TimeUtils
 
 
 class MatchAdapter(
-    private var items: List<MatchItemsData>,  // items: Список матчей (MatchItemsData), который будет отображаться в RecyclerView.
-    private val onItemClick: (MatchItemsData) -> Unit //onItemClick: Функция обратного вызова, которая будет вызываться при клике на элемент RecyclerView и передавать выбранный элемент MatchItemsData.
+    private var items: List<MatchModel>,  // items: Список матчей (MatchItemsData), который будет отображаться в RecyclerView.
+    private val onItemClick: (MatchModel) -> Unit //onItemClick: Функция обратного вызова, которая будет вызываться при клике на элемент RecyclerView и передавать выбранный элемент MatchItemsData.
 ) : RecyclerView.Adapter<MatchAdapter.MatchViewHolder>() {
 
 
@@ -36,7 +36,7 @@ class MatchAdapter(
 
 //    Обновляет список items новыми данными updatedItems.
 //    Вызывает notifyDataSetChanged(), чтобы уведомить RecyclerView об изменениях в данных и запросить перерисовку.
-    fun updateData(updatedItems: List<MatchItemsData>) {
+    fun updateData(updatedItems: List<MatchModel>) {
         items = updatedItems
         notifyDataSetChanged()
     }
@@ -47,7 +47,7 @@ class MatchAdapter(
     inner class MatchViewHolder(private val binding: ListItemMatchBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: MatchItemsData) {
+        fun bind(item: MatchModel) {
             binding.textTeam1.text = item.HomeTeam
             binding.textTeam2.text = item.AwayTeam
           //  binding.textLocation.text = item.Location

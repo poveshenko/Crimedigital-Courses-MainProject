@@ -5,16 +5,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.matchresults.data.api.RetrofitInstance
-import com.example.matchresults.model.MatchItemsData
+import com.example.matchresults.model.MatchModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MatchViewModel : ViewModel() {
 
-    // LiveData для отфильтрованного списка матчей
-    private val _filteredMatches = MutableLiveData<List<MatchItemsData>>()
-    val filteredMatches: LiveData<List<MatchItemsData>>
+    // LiveData для отфильтрованного, списка матчей
+    private val _filteredMatches = MutableLiveData<List<MatchModel>>()
+    val filteredMatches: LiveData<List<MatchModel>>
         get() = _filteredMatches
 
     // Метод для выполнения поиска
@@ -27,8 +27,8 @@ class MatchViewModel : ViewModel() {
         _filteredMatches.value = filteredList
     }
 
-    private val _matches = MutableLiveData<List<MatchItemsData>>()
-    val matches: LiveData<List<MatchItemsData>>
+    private val _matches = MutableLiveData<List<MatchModel>>()
+    val matches: LiveData<List<MatchModel>>
         get() = _matches
 
     init {
